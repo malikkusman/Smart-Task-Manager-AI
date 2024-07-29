@@ -33,8 +33,8 @@ Task Manager AI is a smart task management application that helps you create to-
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/task-ai.git
-   cd task-ai
+   git clone https://github.com/malikkusman/Smart-Task-Manager-AI.git
+   cd Smart-Task-Manager-AI
    ```
 
 2. **Install dependencies:**
@@ -99,5 +99,4 @@ We welcome contributions from the community! Please follow these steps:
 5. Push to the branch (`git push origin feature-branch`).
 6. Open a pull request.
 
-Please ensure your code adheres to our coding standards and includes appropriate tests.
 
