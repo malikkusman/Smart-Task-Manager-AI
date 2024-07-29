@@ -1,27 +1,22 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faLock } from '@fortawesome/free-solid-svg-icons';
 
-const SignUp = () => {
+const SignIn = () => {
   return (
-    <form className="sign-up-form">
-      <h2 className="title">Sign up</h2>
+    <form className="sign-in-form">
+      <h2 className="title">Sign in</h2>
       <div className="input-field">
         <FontAwesomeIcon icon={faUser} className='field-icon'/>
         <input type="text" placeholder="Username" />
       </div>
       <div className="input-field">
-        <FontAwesomeIcon icon={faEnvelope} className='field-icon'/>
-        <input type="email" placeholder="Email" />
-      </div>
-      <div className="input-field">
         <FontAwesomeIcon icon={faLock} className='field-icon'/>
         <input type="password" placeholder="Password" />
       </div>
-      <input type="submit" className="btn" value="Sign up" />
-     
+      <input type="submit" value="Login" className="btn solid" />
     </form>
   );
 };
 
-export default SignUp;
+export default SignIn;
