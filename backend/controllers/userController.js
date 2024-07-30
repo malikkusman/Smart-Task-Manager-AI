@@ -1,7 +1,6 @@
-const User = require("../models/User");
-const validateUser = require("../models/User");
+const { User, validateUser } = require("../models/User");
 
-// Register a Users
+// Register a User
 const registerUser = (req, res) => {
   const { error } = validateUser(req.body);
   if (error) {
@@ -15,6 +14,23 @@ const registerUser = (req, res) => {
     .catch((err) => res.status(400).send(err.message));
 };
 
+// Login a User
+const loginUser = (req, res) => {
+  const { email, password } = req.body;
+  User.findOne({ email })
+    .then((user) => {
+      if (!user) {
+        return res.status(404).send("User not found");
+      }
+      if (user.password !== password) {
+        return res.status(401).send("Invalid password");
+      }
+      res.send("Login successful");
+    })
+    .catch((err) => res.status(400).send(err.message));
+};
+
 module.exports = {
   registerUser,
+  loginUser,
 };
